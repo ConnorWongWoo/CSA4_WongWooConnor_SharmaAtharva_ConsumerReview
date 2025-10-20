@@ -1085,7 +1085,7 @@ frayed,-0.32
 freezing,-0.03
 frequent,-1.04
 frequently,-0.31
-fresh,-0.75
+fresh,0.00
 frightened,-2.15
 frightening,-2.59
 frontal,-0.28
@@ -2182,7 +2182,7 @@ roman,-0.27
 rome,-0.66
 room,-0.64
 rooms,-0.47
-rotten,-1.78
+rotten,0.00
 rotting,-0.58
 rough,-0.45
 rounds,-0.38
