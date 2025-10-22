@@ -13,7 +13,7 @@ class ReviewRunner {
     float sum = 0.0f;
     String[] words = data.split(" ");
     for ( String w: words) {
-      w = Review.removePunctuation(w);
+      w = Review.removePunctuation(w.toLowerCase());
       sum += Review.sentimentVal(w);
     }
     return sum;
