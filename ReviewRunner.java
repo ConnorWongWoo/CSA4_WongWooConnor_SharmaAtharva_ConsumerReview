@@ -13,14 +13,13 @@ class ReviewRunner {
     float sum = 0.0f;
     String[] words = data.split(" ");
     for ( String w: words) {
-      w = Review.removePunctuation(w.toLowerCase());
+      w = Review.removePunctuation(w);
       sum += Review.sentimentVal(w);
     }
     return sum;
   }
 
   public static void main(String[] args) {
-    // Used chatgpt to properly split the reviews after the date
     String[] data = Review.textToString("data.txt").split("(?=(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\\s+\\d{1,2},\\s*\\d{4})");
 
     int i = 0;
