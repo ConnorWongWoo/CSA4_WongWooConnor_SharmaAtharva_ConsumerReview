@@ -13,6 +13,7 @@ class ReviewRunner {
     float sum = 0.0f;
     String[] words = data.split(" ");
     for ( String w: words) {
+      w = Review.removePunctuation(w.toLowerCase());
       sum += Review.sentimentVal(w);
     }
     return sum;
@@ -33,8 +34,8 @@ class ReviewRunner {
     }
     avg_sentiment = avg_sentiment / i;
     System.out.println("The average sentiment of the reviews of the movie Ironman (2008) is: " + avg_sentiment + ".");
-    if (avg_sentiment > 3.5f) System.out.println("The reviews were mostly positive! People loved the movie!");
-    else if (2.5f < avg_sentiment) System.out.println("The reviews were somewhat positive. People liked this movie.");
+    if (avg_sentiment > 4.0f) System.out.println("The reviews were mostly positive! People loved the movie!");
+    else if (3.0f < avg_sentiment) System.out.println("The reviews were somewhat positive. People liked this movie.");
     else System.out.println("The reviews were pretty bad... People did not like this movie.");
   }
 }
